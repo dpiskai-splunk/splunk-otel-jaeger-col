@@ -1,0 +1,22 @@
+clusterName: <clustername>
+splunkAccessToken: <token>
+splunkRealm: us1
+environment: <env>
+distro: <eks,gke,aks>
+provider: <azure,gcp,aws>
+autodetect:
+  prometheus: true
+image:
+  otelcol:
+    repository: davepiskai/splunk-otel-jaeger-col
+    tag: latest 
+otelCollector:
+  enabled: true
+otelAgent:
+  ports:
+    jaeger-agent:
+      containerPort: 6831
+      hostPort: 6831
+      protocol: UDP
+      enabled_for: [traces]
+
