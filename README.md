@@ -1,0 +1,1 @@
+# splunk-otel-jaeger-col
