@@ -4,11 +4,12 @@ Changes
 
 - Config replacement
   
-Edit file `otelAgent.config`
-Edit file `values-splunk.yaml`
+
+
+Edit variables in file `values-splunk.yaml`
 
 - Helm Install 
   
-Run something like...
+Install the chart including the values file (`values-splunk.yaml`) and `otelAgent.config`
 
 `helm install splunk-otel-collector --values values-splunk.yaml -f otelAgent.config splunk-otel-collector-chart/splunk-otel-collector`
